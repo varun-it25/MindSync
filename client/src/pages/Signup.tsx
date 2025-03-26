@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 
-export default function Login(){
+export default function SignUp(){
     return (
       <div className="w-screen bg-black text-white h-screen flex justify-center items-center relative">
         <div className="w-full h-full top-0 absolute">
@@ -13,12 +13,12 @@ export default function Login(){
           <div className="space-y-2 pt-2 pb-5">
             <p className="text-sm font-semibold">Email</p>
             <Input type="email" required />
-            <p className="pt-1 text-sm font-semibold">Password</p>
+            <p className="pt-1 text-sm font-semibold">Create Password</p>
             <Input type="password" required />
           </div>
-          <Button type="submit" className="w-full dark cursor-pointer">Login</Button>
+          <Button type="submit" className="w-full dark cursor-pointer">Sign Up</Button>
           <p className="text-center pt-6 text-xs font-bold border-b"></p>
-          <p className="dark text-center pt-3 pb-2">If you don't have an account? <span><Link to={`/signup`} className="cursor-pointer font-semibold pl-2.5 hover:no-underline underline">Sign Up</Link></span></p>
+          <p className="dark text-center pt-3 pb-2">If you have an account? <span><Link to={`/login`} className="cursor-pointer font-semibold pl-2.5 hover:no-underline underline">Login</Link></span></p>
         </form>
       </div>
     )

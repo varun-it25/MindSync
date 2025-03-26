@@ -12,8 +12,8 @@ export default function Landing_Page(){
             <p className="font-bold text-4xl sm:text-5xl">TREAT DEPRESSION</p>
             <p className="font-semibold text-3xl sm:text-4xl">WITH CHALLENGES</p>
             <div className="flex space-x-4 p-4">
-              <Link to={`/`}><Button className="cursor-pointer" variant={`outline`}>Learn More</Button></Link>
-              <Link to={`/`}><Button className="cursor-pointer">Get Started</Button></Link>
+              <Link to={`/about`}><Button className="cursor-pointer" variant={`outline`}>Learn More</Button></Link>
+              <Link to={`/login`}><Button className="cursor-pointer">Get Started</Button></Link>
             </div>
           </div>
         </div>
