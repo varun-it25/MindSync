@@ -3,7 +3,7 @@ import { Button } from "./ui/button"
 
 const Navbar = () => {
   return (
-    <header className="flex justify-center items-center p-4 border-b-2 bg-black sticky top-0">
+    <header className="flex justify-center items-center p-4 border-b-2 bg-black sticky top-0 z-50">
       <div className="max-w-6xl flex-1 flex justify-between items-center">
         <Link to={`/`}><p className="font-semibold text-xl">MindSync</p></Link>
         <nav className="hidden sm:flex flex-1 justify-center items-center space-x-6">
