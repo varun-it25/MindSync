@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { HeroText } from "@/components/HeroText";
+import { AppleCardsCarouselDemo } from "@/components/AppleCardsCarouselDemo";
 
 export default function Landing_Page(){
   return (
@@ -26,6 +27,7 @@ export default function Landing_Page(){
       <div>
         <Features/>
       </div>
+      <AppleCardsCarouselDemo />
     </div>
   )
 }
