@@ -4,6 +4,8 @@ import Landing_Page from "./pages/Landing-Page"
 import Not_Found from "./pages/Not-Found"
 import Sign_Up from "./pages/Signup"
 import Login from "./pages/Login"
+import Admin_Panel from "./pages/Admin-Panel"
+import Meditation from "./pages/Meditation"
 import Dashboard from "./pages/Dashboard"
 import Start from "./pages/Start"
 
@@ -17,6 +19,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/start" element={<Start />} />
         <Route path="/*" element={<Not_Found />} />
+        <Route path="/meditation" element={<Meditation />} />
       </Routes>
     </Router>    
   )
