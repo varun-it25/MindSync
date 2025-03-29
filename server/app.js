@@ -1,6 +1,6 @@
 import express from "express";
 // import cors from "cors";
-import axios from "axios";
+// import axios from "axios";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const app = express();
