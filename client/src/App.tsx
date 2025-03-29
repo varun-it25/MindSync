@@ -5,6 +5,7 @@ import Not_Found from "./pages/Not-Found"
 import Sign_Up from "./pages/Signup"
 import Login from "./pages/Login"
 import Admin_Panel from "./pages/Admin-Panel"
+import Meditation from "./pages/Meditation"
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/dashboard" element={<Admin_Panel />} />
         <Route path="/login" element={<Login />} />
         <Route path="/*" element={<Not_Found />} />
+        <Route path="/meditation" element={<Meditation />} />
       </Routes>
     </Router>    
   )
