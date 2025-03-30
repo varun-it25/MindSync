@@ -35,7 +35,7 @@ function BubbleBox({ message }: { message: string }) {
   );
 }
 
-export default function Admin_Panel() {
+export default function Games() {
   const [open, setOpen] = useState(false);
   const [open_2, setOpen_2] = useState(false);
   const [userInput, setUserInput] = useState("");
@@ -107,111 +107,7 @@ export default function Admin_Panel() {
             </nav>
 
       <div className="h-full flex-1 flex flex-col space-y-4">
-        <div className="w-full flex-1 bg-zinc-900 rounded-xl p-6 flex flex-col items-center overflow-auto">
-          <div className="bg-zinc-700 rounded-xl w-full px-5 py-3 flex justify-between items-center">
-            <p className="font-medium">How was your day?</p>
-
-            <Dialog
-              open={open}
-              onOpenChange={(openState) => setOpen(openState)}
-            >
-              <DialogTrigger asChild>
-                <Button onClick={openDialog} className="cursor-pointer">
-                  <ReceiptText />
-                  <p>Say something</p>
-                </Button>
-              </DialogTrigger>
-
-              <DialogContent className="sm:max-w-[425px] dark text-accent-foreground">
-                <DialogHeader>
-                  <DialogTitle>
-                    How was your day?{" "}
-                  </DialogTitle>
-                  <DialogDescription>
-                    Write about your day in this textbox.
-                  </DialogDescription>
-                </DialogHeader>
-
-                <textarea
-                  value={userInput}
-                  onChange={(e) => setUserInput(e.target.value)}
-                  rows={6}
-                  className="border border-zinc-700 rounded-xl focus:border-none p-3"
-                ></textarea>
-
-                <DialogFooter>
-                  <Button
-                    onClick={() => {
-                      submitUserInput();
-                      closeDialog();
-                      openDialog_2();
-                      setUserInput("")
-                    }}
-                    className="cursor-pointer"
-                  >
-                    Send
-                  </Button>
-                </DialogFooter>
-              </DialogContent>
-            </Dialog>
-
-            <Dialog
-              open={open_2}
-              onOpenChange={(openState) => setOpen_2(openState)}
-            >
-              <DialogContent className="sm:max-w-[425px] dark text-accent-foreground">
-                <DialogHeader>
-                  <DialogTitle>Your Emotion Now !</DialogTitle>
-                </DialogHeader>
-
-                <div className="w-full aspect-square bg-green-800 rounded-lg flex justify-center items-center ">
-                  <p className="text-5xl">
-                    {localStorage.getItem("user-emotion")}
-                  </p>
-                </div>
-
-                <DialogFooter>
-                  <Button onClick={closeDialog_2} className="cursor-pointer">
-                    Okay
-                  </Button>
-                </DialogFooter>
-              </DialogContent>
-            </Dialog>
-          </div>
-
-          <div className="w-full rounded-xl flex-1 px-5 pt-12 pb-3 flex flex-col items-center space-y-20 overflow-auto">
-            <Link
-              to={`/meditation`}
-              className="w-14 aspect-square rounded-full border-4 border-zinc-200 bg-zinc-700 flex justify-center items-center relative cursor-pointer"
-            >
-              <p className="pb-0.5 font-bold text-xl text-white ml-2">1</p>
-              <BubbleBox message="Meditation Room" />
-            </Link>
-
-            <Link
-              to={`/challenges`}
-              className="w-14 aspect-square rounded-full border-4 border-zinc-600 bg-zinc-700 text-zinc-400 flex justify-center items-center text-xl font-bold ml-[7rem] relative cursor-pointer"
-              title="Locked"
-            >
-              <p className="pb-0.5 font-bold text-xl">2</p>
-            </Link>
-
-            <Link
-              to={`/game`}
-              className="w-14 aspect-square rounded-full border-4 border-zinc-600 bg-zinc-700 text-zinc-400 flex justify-center items-center text-xl font-bold ml-[-8rem] cursor-pointer"
-              title="Locked"
-            >
-              <p className="pb-0.5 font-bold text-xl">3</p>
-            </Link>
-            <Link
-              to={`/game`}
-              className="w-14 aspect-square rounded-full border-4 border-zinc-600 bg-zinc-700 text-zinc-400 flex justify-center items-center text-xl font-bold ml-[-rem] cursor-pointer"
-              title="Locked"
-            >
-              <p className="pb-0.5 font-bold text-xl">4</p>
-            </Link>
-          </div>
-        </div>
+        <iframe src="https://www.bubbleshooter.net/games/bubble-shooter-pop-now/" frameBorder="0" scrolling="no" className="w-full h-full rounded-xl" ></iframe>
       </div>
 
       <div className="h-full w-[13.5rem] rounded-xl hidden md:flex">

@@ -11,7 +11,7 @@ const Navbar = () => {
           <Link to={`/about`} className="hover:font-medium">About</Link>
           <Link to={`/contact`} className="hover:font-medium">Contact</Link>
         </nav>
-        <Link to={`/login`}><Button className="cursor-pointer">Get Started</Button></Link>
+        <Link to={`/start`}><Button className="cursor-pointer">Get Started</Button></Link>
       </div>
     </header>
   )

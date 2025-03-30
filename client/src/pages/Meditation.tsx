@@ -2,17 +2,23 @@ import Navbar from "@/components/Navbar";
 import girl from "@/assets/girl.png";
 import { useState, useEffect, useRef } from "react";
 import audioFile from "@/assets/5-MinuteMeditationYouCanDoAnywhere.mp3";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function Meditation() {
   const audioRef = useRef(null);
 
   const [progress, setProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [playedTime, setPlayedTime] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
   const duration = 180; // Duration of the guided meditation in seconds (3 mins)
 
   // Start or stop audio and timer
   const toggleMeditation = () => {
+    if(playedTime === 0){
+      setPlayedTime(1)
+    }
     if (isPlaying) {
       // Stop audio and clear timer
       audioRef.current.pause();
@@ -39,7 +45,6 @@ export default function Meditation() {
 
   return (
     <div className="w-screen h-screen dark bg-black text-accent-foreground">
-      <Navbar />
       <section className="relative flex justify-center h-[90vh] sm:h-[100%] p-4">
         <div className="relative w-60 h-60 mt-40 flex justify-center items-center">
           <svg
@@ -88,12 +93,15 @@ export default function Meditation() {
         {/* Meditation Control Button */}
         <button
           onClick={toggleMeditation}
-          className={`absolute top-10 right-10 px-6 py-2 rounded-lg text-white ${
+          className={`absolute bottom-20 px-6 py-2 rounded-lg text-white ${
             isPlaying ? "bg-red-500 hover:bg-red-700" : "bg-green-500 hover:bg-green-700"
           }`}
         >
           {isPlaying ? "Stop Meditation" : "Start Meditation"}
         </button>
+        {
+           !isPlaying && playedTime !== 0 &&  <Link to="/dashboard" className="absolute bottom-20 right-[40%]"><Button className="cursor-pointer">Next</Button></Link>
+        }
 
         {/* Girl Images at the Bottom */}
         <div className="absolute bottom-20 flex justify-center w-full space-x-150 mb-20 ">
