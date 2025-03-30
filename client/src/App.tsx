@@ -5,8 +5,15 @@ import Not_Found from "./pages/Not-Found"
 import Sign_Up from "./pages/Signup"
 import Login from "./pages/Login"
 import Admin_Panel from "./pages/Admin-Panel"
+
 // import { Library } from "lucide-react"
 import Library from "./pages/Library"
+import Meditation from "./pages/Meditation"
+import Dashboard from "./pages/Dashboard"
+import Start from "./pages/Start"
+import ChallengesPage from "./pages/Challenges"
+import Games from "./pages/Games"
+
 
 const App = () => {
   return (
@@ -14,10 +21,17 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing_Page />} />
         <Route path="/signup" element={<Sign_Up />} />
-        <Route path="/dashboard" element={<Admin_Panel />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/start" element={<Start />} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/challenges" element={<ChallengesPage />} />
         <Route path="/*" element={<Not_Found />} />
+
         <Route path="/library" element={<Library/>} />
+
+
+        <Route path="/meditation" element={<Meditation />} />
 
       </Routes>
     </Router>    
